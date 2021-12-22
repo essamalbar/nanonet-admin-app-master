@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".AddProviderActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/widget_margin"
+        app:cardCornerRadius="@dimen/radius"
+        app:cardElevation="@dimen/card">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/AppHeadText"
+                    android:text="@string/provider" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/nameTIL"
+                    style="@style/AppTextInputLayoutBase"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_round_person">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/name"
+                        android:inputType="textPersonName" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/emailTIL"
+                    style="@style/AppTextInputLayoutBase"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_round_alternate_email">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/passwordTIL"
+                    style="@style/AppTextInputLayoutBase"
+                    app:endIconMode="password_toggle"
+                    app:startIconDrawable="@drawable/ic_round_security">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/password"
+                        android:inputType="textPassword" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/dateTIL"
+                    style="@style/AppTextInputLayoutBase"
+                    app:startIconDrawable="@drawable/ic_round_today">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="@string/start_date"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/main"
+                    android:layout_marginEnd="@dimen/main"
+                    android:layout_marginBottom="@dimen/widget_margin"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/countSP"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/action_height"
+                        android:layout_marginEnd="@dimen/mini"
+                        android:layout_weight="1"
+                        android:background="@drawable/hide_background" />
+
+                    <Spinner
+                        android:id="@+id/typeSP"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/action_height"
+                        android:layout_marginStart="@dimen/mini"
+                        android:layout_weight="1"
+                        android:background="@drawable/hide_background" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/saveBTN"
+                    style="@style/AppMainButton"
+                    android:text="@string/save" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "292746727012",
+    "project_id": "nanonet-7474b",
+    "storage_bucket": "nanonet-7474b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292746727012:android:c860bcc171bf12a8359971",
+        "android_client_info": {
+          "package_name": "com.crazyiter.nanonet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "292746727012-rf7pcgj79d0neici5t529p6i0a4njf99.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.crazyiter.nanonet",
+            "certificate_hash": "76aa12dd2dc10eebed378179ad2bbb6f69015856"
+          }
+        },
+        {
+          "client_id": "292746727012-mcgildrqg6dk9b2ao08m672s9bij33nu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxip41zJlBSxcJ8Ttp5O1rdyXI0z4d6zI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "292746727012-mcgildrqg6dk9b2ao08m672s9bij33nu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

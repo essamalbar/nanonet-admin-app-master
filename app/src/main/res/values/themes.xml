@@ -1,0 +1,231 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.NanoNet" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorLight</item>
+        <item name="colorSecondaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">
+            ?attr/colorPrimaryVariant
+        </item>
+        <!-- Customize your theme here. -->
+        <item name="android:layoutDirection">rtl</item>
+    </style>
+
+    <style name="AppTextInputLayoutBase" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:layout_marginStart">@dimen/main</item>
+        <item name="android:layout_marginEnd">@dimen/main</item>
+        <item name="android:layout_marginTop">@dimen/main_margin</item>
+        <item name="android:layout_marginBottom">@dimen/main_margin</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/action_height</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius</item>
+        <item name="counterEnabled">true</item>
+        <item name="counterMaxLength">25</item>
+        <item name="errorEnabled">true</item>
+    </style>
+
+    <style name="AppButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/action_height</item>
+        <item name="android:layout_marginStart">@dimen/main</item>
+        <item name="android:layout_marginEnd">@dimen/main</item>
+        <item name="android:layout_marginTop">@dimen/mini</item>
+        <item name="android:layout_marginBottom">@dimen/mini</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/list_text</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="AppMainButton" parent="AppButton">
+        <item name="android:background">@drawable/btns_background</item>
+    </style>
+
+    <style name="AppMain2Button" parent="AppButton">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:background">@drawable/btns_background_second</item>
+    </style>
+
+    <style name="AppTexts" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/widget_margin</item>
+        <item name="android:layout_marginEnd">@dimen/widget_margin</item>
+        <item name="android:layout_marginTop">@dimen/main</item>
+        <item name="android:layout_marginBottom">@dimen/main</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/player_name_card</item>
+        <item name="android:textColor">@color/textPrimary</item>
+    </style>
+
+    <style name="CategoryText" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">@dimen/mini</item>
+        <item name="android:paddingStart">@dimen/mini_padding
+        </item>
+        <item name="android:paddingEnd">@dimen/mini_padding</item>
+        <item name="android:paddingTop">@dimen/mini</item>
+        <item name="android:paddingBottom">@dimen/mini</item>
+        <item name="android:textSize">@dimen/main</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+    <style name="AppText" parent="AppTexts">
+        <item name="android:textSize">@dimen/main</item>
+    </style>
+
+    <style name="AppHeadText" parent="AppTexts">
+        <item name="android:textSize">@dimen/head_text</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginStart">@dimen/main</item>
+        <item name="android:layout_marginEnd">@dimen/main</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppSubHeadText" parent="AppTexts">
+        <item name="android:gravity">start</item>
+        <item name="android:layout_marginStart">@dimen/main</item>
+        <item name="android:layout_marginEnd">@dimen/main</item>
+        <item name="android:textSize">@dimen/sub_head_text</item>
+        <item name="android:textColor">@color/textPrimary</item>
+    </style>
+
+    <style name="AppListText" parent="AppTexts">
+        <item name="android:textSize">@dimen/list_text</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+
+    <style name="AppTextNav" parent="AppListText">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="AppTextCategory" parent="AppSubHeadText">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="AppClickableText" parent="AppText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="NavIcons" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">@dimen/icon_xy</item>
+        <item name="android:layout_height">@dimen/icon_xy</item>
+        <item name="android:padding">@dimen/mini</item>
+        <item name="android:layout_margin">@dimen/mini</item>
+        <item name="tint">@color/colorPrimary</item>
+    </style>
+
+    <style name="CategoryIcons" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">@dimen/mini_logo</item>
+        <item name="android:layout_height">@dimen/mini_logo</item>
+        <item name="android:padding">@dimen/mini</item>
+        <item name="android:layout_marginTop">@dimen/mini</item>
+        <item name="android:layout_marginBottom">@dimen/card</item>
+        <item name="android:layout_marginStart">@dimen/mini</item>
+        <item name="android:layout_marginEnd">@dimen/mini</item>
+    </style>
+
+    <style name="NavDividers" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/divider</item>
+        <item name="android:background">@color/colorLight</item>
+        <item name="android:layout_marginStart">@dimen/main</item>
+        <item name="android:layout_marginEnd">@dimen/main</item>
+    </style>
+
+    <style name="navLinearLayout" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginStart">@dimen/main</item>
+        <item name="android:layout_marginEnd">@dimen/main</item>
+        <item name="android:layout_marginTop">@dimen/mini</item>
+        <item name="android:layout_marginBottom">@dimen/mini</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="mainToolBar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/action_height</item>
+        <item name="titleTextColor">@color/colorPrimary</item>
+        <item name="subtitleTextColor">@color/textPrimary</item>
+        <!--        <item name="navigationIcon">@drawable/ic_round_menu</item>-->
+    </style>
+
+    <style name="IconSocial" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">?attr/actionBarSize</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:layout_margin">@dimen/mini</item>
+    </style>
+
+    <style name="BackIcon">
+        <item name="android:layout_width">@dimen/icon_xy</item>
+        <item name="android:layout_height">@dimen/icon_xy</item>
+        <item name="android:layout_margin">@dimen/mini</item>
+        <item name="android:padding">@dimen/mini</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:src">@drawable/ic_round_arrow_back</item>
+        <item name="tint">@color/colorLight</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="FeaturesFAB" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="tint">@android:color/white</item>
+    </style>
+
+    <style name="NavCount" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_height">@dimen/max_margin</item>
+        <item name="android:layout_width">@dimen/max_margin</item>
+        <item name="android:background">@drawable/ic_baseline_circle</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/title</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Theme.NanoNet.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.NanoNet.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.NanoNet.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

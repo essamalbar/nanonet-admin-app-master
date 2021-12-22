@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        app:cardCornerRadius="@dimen/radius"
+        app:cardElevation="@dimen/card">
+
+        <LinearLayout
+            android:id="@+id/providerLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorYellow"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="UnusedAttribute">
+
+            <ImageView
+                android:id="@+id/isOnlineTV"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="@dimen/main"
+                android:src="@drawable/ic_baseline_circle"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/nameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="start"
+                    style="@style/AppListText"
+                    android:layout_marginStart="@dimen/main"
+                    android:layout_marginEnd="@dimen/main"
+                    android:text="@string/app_name"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="@dimen/divider"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/mini"
+                android:layout_marginBottom="@dimen/mini"
+                android:background="@android:color/white" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/action_height"
+                android:minWidth="@dimen/action_height">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/daysTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/widget_margin"
+                    android:layout_marginEnd="@dimen/widget_margin"
+                    android:gravity="center"
+                    android:text="365"
+                    android:textColor="@android:color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

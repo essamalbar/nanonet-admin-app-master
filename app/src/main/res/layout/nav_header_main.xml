@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <TextView
+        android:id="@+id/nameTV"
+        style="@style/AppHeadText"
+        android:layout_height="@dimen/mini_logo"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:text="@string/name" />
+
+    <LinearLayout
+        style="@style/navLinearLayout"
+        android:layout_marginBottom="0dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/NavIcons"
+            android:src="@drawable/ic_round_people" />
+
+        <TextView
+            style="@style/AppTextNav"
+            android:text="@string/provider_status" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/navLinearLayout"
+        android:layout_marginTop="0dp">
+
+        <TextView
+            android:id="@+id/activeTV"
+            style="@style/NavCount"
+            app:backgroundTint="@color/colorGreen" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/warningTV"
+            style="@style/NavCount"
+            app:backgroundTint="@color/colorYellow" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/expireTV"
+            style="@style/NavCount"
+            app:backgroundTint="@color/colorRed" />
+
+    </LinearLayout>
+
+    <RelativeLayout style="@style/NavDividers" />
+
+    <LinearLayout
+        style="@style/navLinearLayout"
+        android:layout_marginBottom="0dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/NavIcons"
+            android:src="@drawable/ic_round_filter_list" />
+
+        <TextView
+            style="@style/AppTextNav"
+            android:text="@string/order_by" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/orderRG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/main"
+        android:layout_marginEnd="@dimen/main"
+        android:layout_marginBottom="@dimen/main"
+        android:checkedButton="@id/nameRB"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/nameRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/by_name"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/list_text"
+            app:buttonTint="@color/colorPrimary"
+            tools:ignore="SpUsage" />
+
+        <RadioButton
+            android:id="@+id/daysRB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/by_days"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/list_text"
+            app:buttonTint="@color/colorPrimary"
+            tools:ignore="SpUsage" />
+
+    </RadioGroup>
+
+    <RelativeLayout style="@style/NavDividers" />
+
+    <LinearLayout
+        android:id="@+id/logoutLL"
+        style="@style/navLinearLayout"
+        android:foreground="?attr/selectableItemBackground"
+        tools:ignore="UnusedAttribute">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/NavIcons"
+            android:src="@drawable/ic_round_exit_to_app" />
+
+        <TextView
+            style="@style/AppTextNav"
+            android:text="@string/logout" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

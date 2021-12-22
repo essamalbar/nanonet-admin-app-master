@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ProviderInfoActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/widget_margin"
+        app:cardCornerRadius="@dimen/radius"
+        app:cardElevation="@dimen/card">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/action_height">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nameTV"
+                    style="@style/AppHeadText"
+                    android:layout_height="@dimen/mini_logo"
+                    android:gravity="center"
+                    android:text="@string/name" />
+
+                <RelativeLayout style="@style/NavDividers" />
+
+                <LinearLayout
+                    android:id="@+id/emailLL"
+                    style="@style/navLinearLayout"
+                    android:foreground="?attr/selectableItemBackground"
+                    tools:ignore="UnusedAttribute">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/NavIcons"
+                        android:src="@drawable/ic_round_alternate_email" />
+
+                    <TextView
+                        android:id="@+id/emailTV"
+                        style="@style/AppTextNav"
+                        android:gravity="right"
+                        android:text="@string/email"
+                        tools:ignore="RtlHardcoded" />
+
+                </LinearLayout>
+
+                <RelativeLayout style="@style/NavDividers" />
+
+                <LinearLayout style="@style/navLinearLayout">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/NavIcons"
+                        android:src="@drawable/ic_round_today" />
+
+                    <TextView
+                        android:id="@+id/startDateTV"
+                        style="@style/AppTextNav"
+                        android:gravity="right"
+                        tools:ignore="RtlHardcoded"
+                        android:text="@string/start_date" />
+
+                </LinearLayout>
+
+                <RelativeLayout style="@style/NavDividers" />
+
+                <LinearLayout style="@style/navLinearLayout">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/NavIcons"
+                        android:src="@drawable/ic_round_hourglass_top" />
+
+                    <TextView
+                        android:id="@+id/endDateTV"
+                        style="@style/AppTextNav"
+                        android:gravity="right"
+                        tools:ignore="RtlHardcoded"
+                        android:text="@string/start_date" />
+
+                </LinearLayout>
+
+                <RelativeLayout style="@style/NavDividers" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/providerBNV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_height"
+            android:layout_gravity="bottom"
+            app:backgroundTint="@color/colorLight"
+            app:itemIconTint="@color/colorPrimaryDark"
+            app:itemTextColor="@color/colorPrimaryDark"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/provider_item_menu" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

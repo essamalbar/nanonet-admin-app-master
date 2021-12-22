@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainAdminActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/widget_margin"
+            app:cardCornerRadius="@dimen/radius"
+            app:cardElevation="@dimen/card">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/mini"
+                    android:paddingEnd="@dimen/mini">
+
+                    <ImageView
+                        android:id="@+id/menuIV"
+                        style="@style/NavIcons"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:src="@drawable/ic_round_menu"
+                        app:tint="@color/colorPrimary"
+                        tools:ignore="ContentDescription,UnusedAttribute" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/AppHeadText"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/providers" />
+
+                    <ImageView
+                        android:id="@+id/searchIV"
+                        style="@style/NavIcons"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:src="@drawable/ic_round_search"
+                        app:tint="@color/colorPrimary"
+                        tools:ignore="ContentDescription,UnusedAttribute" />
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/searchTIL"
+                    style="@style/AppTextInputLayoutBase"
+                    android:layout_marginTop="0dp"
+                    android:visibility="gone"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_round_search">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/search"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/providersRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/noTV"
+                style="@style/AppText"
+                android:layout_gravity="center"
+                android:text="@string/no_provider_yet" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/mainFAB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_margin="@dimen/main"
+                android:src="@drawable/ic_round_add"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
